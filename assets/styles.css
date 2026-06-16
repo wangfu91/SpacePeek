@@ -518,7 +518,7 @@ h1 {
     margin-top: 14px;
 }
 
-.faq-card p + p {
+.faq-card p+p {
     margin-top: 10px;
 }
 
