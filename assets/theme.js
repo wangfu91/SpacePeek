@@ -12,49 +12,38 @@
   }
 
   function updateButton(themeChoice) {
-    if (themeChoice === "auto") {
-      toggle.textContent = "Theme: Auto";
-      return;
-    }
-    toggle.textContent = "Theme: " + (themeChoice === "dark" ? "Dark" : "Light");
+    toggle.textContent = themeChoice === "dark" ? "Switch to Light" : "Switch to Dark";
   }
 
   function applyTheme(themeChoice) {
-    if (themeChoice === "auto") {
-      root.removeAttribute("data-theme");
-    } else {
-      root.setAttribute("data-theme", themeChoice);
-    }
+    root.setAttribute("data-theme", themeChoice);
     updateButton(themeChoice);
   }
 
-  function getStoredTheme() {
+  function getStoredThemeOrNull() {
     const stored = window.localStorage.getItem(key);
-    if (stored === "dark" || stored === "light" || stored === "auto") {
+    if (stored === "dark" || stored === "light") {
       return stored;
     }
-    return "auto";
+    return null;
   }
 
-  let themeChoice = getStoredTheme();
+  const stored = getStoredThemeOrNull();
+  const followSystem = stored === null;
+  let themeChoice = stored || getSystemTheme();
   applyTheme(themeChoice);
 
   toggle.addEventListener("click", function () {
-    if (themeChoice === "auto") {
-      themeChoice = getSystemTheme() === "dark" ? "light" : "dark";
-    } else if (themeChoice === "dark") {
-      themeChoice = "light";
-    } else {
-      themeChoice = "auto";
-    }
+    themeChoice = themeChoice === "dark" ? "light" : "dark";
 
     window.localStorage.setItem(key, themeChoice);
     applyTheme(themeChoice);
   });
 
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
-    if (themeChoice === "auto") {
-      applyTheme("auto");
+    if (followSystem && window.localStorage.getItem(key) === null) {
+      themeChoice = getSystemTheme();
+      applyTheme(themeChoice);
     }
   });
 })();
