@@ -12,7 +12,9 @@
   }
 
   function updateButton(themeChoice) {
-    toggle.textContent = themeChoice === "dark" ? "Switch to Light" : "Switch to Dark";
+    const nextTheme = themeChoice === "dark" ? "light" : "dark";
+    toggle.setAttribute("aria-label", "Switch to " + nextTheme + " theme");
+    toggle.setAttribute("title", "Switch to " + nextTheme + " theme");
   }
 
   function applyTheme(themeChoice) {

@@ -127,14 +127,29 @@ nav a:focus-visible {
     background: var(--surface-strong);
     color: var(--text);
     border-radius: 9999px;
-    padding: 8px 12px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
     font-weight: 700;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
     border-color: var(--primary-strong);
+}
+
+.theme-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+html[data-theme="light"] .theme-icon-moon,
+html[data-theme="dark"] .theme-icon-sun {
+    display: none;
 }
 
 .container {
@@ -367,15 +382,6 @@ h1 {
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 16px;
-}
-
-.support-note {
-    margin-top: 14px;
-    font-size: 0.94rem;
-}
-
-.support-note a {
-    color: var(--primary-strong);
 }
 
 .site-footer {
