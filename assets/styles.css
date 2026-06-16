@@ -300,9 +300,18 @@ h1 {
 }
 
 .btn-store {
-    background: linear-gradient(135deg, #141414, #333333);
-    color: #ffffff;
+    background: linear-gradient(135deg, #1d2a21, #31543b);
+    color: #eff8ed;
     min-height: 46px;
+    border: 1px solid rgba(146, 190, 147, 0.22);
+    box-shadow: 0 12px 24px rgba(27, 45, 31, 0.22);
+    letter-spacing: 0.01em;
+}
+
+.btn-store span[aria-hidden="true"] {
+    margin-right: 8px;
+    font-size: 1.02em;
+    line-height: 1;
 }
 
 .btn.is-disabled,
@@ -634,8 +643,10 @@ h1 {
     }
 
     .btn-store {
-        background: linear-gradient(135deg, #f2f2f2, #cfcfcf);
-        color: #151515;
+        background: linear-gradient(135deg, #1d2a21, #31543b);
+        color: #eff8ed;
+        border-color: rgba(146, 190, 147, 0.24);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
     }
 
     .shot-card figcaption {
