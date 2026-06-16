@@ -2,8 +2,9 @@
   const wrap = document.getElementById("stackWrap");
   const nextBtn = document.getElementById("nextShot");
   const prevBtn = document.getElementById("prevShot");
+  const dotsWrap = document.getElementById("galleryDots");
 
-  if (!wrap || !nextBtn || !prevBtn) {
+  if (!wrap || !nextBtn || !prevBtn || !dotsWrap) {
     return;
   }
 
@@ -12,22 +13,30 @@
     return;
   }
 
-  const stateClasses = ["state-top", "state-mid", "state-low", "state-hidden"];
-
-  // Shuffle once on load so the stack feels less static.
-  for (let i = cards.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [cards[i], cards[j]] = [cards[j], cards[i]];
-  }
-
   let offset = 0;
   let timerId;
+  const dots = cards.map(function (_, index) {
+    const button = document.createElement("button");
+    button.className = "gallery-dot";
+    button.type = "button";
+    button.setAttribute("aria-label", "Show screenshot " + (index + 1));
+    button.addEventListener("click", function () {
+      offset = index;
+      paint();
+      resetTimer();
+    });
+    dotsWrap.appendChild(button);
+    return button;
+  });
 
   function paint() {
     cards.forEach((card, idx) => {
-      stateClasses.forEach((name) => card.classList.remove(name));
-      const pos = (idx - offset + cards.length) % cards.length;
-      card.classList.add(stateClasses[Math.min(pos, stateClasses.length - 1)]);
+      card.classList.toggle("is-active", idx === offset);
+    });
+
+    dots.forEach(function (dot, index) {
+      dot.classList.toggle("is-active", index === offset);
+      dot.setAttribute("aria-current", index === offset ? "true" : "false");
     });
   }
 
