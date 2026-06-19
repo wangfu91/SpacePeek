@@ -6,117 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SpacePeek - Preview Folder Size Instantly from Finder</title>
     <meta name="description"
-        content="Select a folder in Finder, press Space, and instantly preview disk usage with SpacePeek. Built with a high-performance Rust engine and polished SwiftUI interface." />
-    <meta name="theme-color" content="#0f1712" />
+        content="Select a folder in Finder, press the Space Bar, and SpacePeek shows you which items are taking up space." />
+    <meta name="theme-color" content="#f7f8fb" />
+    <link rel="canonical" href="https://spacepeek.space/" />
     <meta property="og:title" content="SpacePeek - Preview Folder Size Instantly from Finder" />
     <meta property="og:description"
-        content="SpacePeek lets you select a folder in Finder, press Space, and instantly inspect size, item counts, and top space consumers." />
+        content="Preview folder size, item counts, top space consumers, and storage distribution directly from Finder Quick Look." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://wangfu91.github.io/SpacePeek/" />
-    <meta property="og:image" content="https://wangfu91.github.io/SpacePeek/screenshots/SpacePeek-01.jpg" />
+    <meta property="og:url" content="https://spacepeek.space/" />
+    <meta property="og:image" content="https://spacepeek.space/posters/01.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="SpacePeek - Preview Folder Size Instantly from Finder" />
     <meta name="twitter:description"
-        content="Preview folder size and storage breakdown instantly with a Space Bar press in Finder." />
-    <meta name="twitter:image" content="https://wangfu91.github.io/SpacePeek/screenshots/SpacePeek-01.jpg" />
-    <link rel="icon" href="favicon.ico?v=4" sizes="any" />
+        content="Select a folder in Finder, press the Space Bar, and SpacePeek shows you which items are taking up space." />
+    <meta name="twitter:image" content="https://spacepeek.space/posters/01.png" />
+    <link rel="icon" href="favicon.ico?v=8" sizes="any" />
+    <link rel="apple-touch-icon" href="assets/SpacePeek.png" />
     <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
-    <div class="bg-orb bg-orb-1"></div>
-    <div class="bg-orb bg-orb-2"></div>
-
     <header class="site-header" id="siteHeader">
-        <a class="brand" href="#top">SpacePeek</a>
+        <a class="brand" href="#top">
+            <img src="assets/SpacePeek.png" alt="" />
+            <span>SpacePeek</span>
+        </a>
         <nav aria-label="Primary navigation">
-            <a href="#about">About</a>
+            <a href="#features">Features</a>
             <a href="#how-it-works">How It Works</a>
             <a href="#screenshots">Screenshots</a>
+            <a href="#pro">Pro</a>
             <a href="#support">Support</a>
-            <a href="privacy.html">Privacy</a>
-            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
-                <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-                <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
-            </button>
         </nav>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+                <span class="theme-toggle-icon theme-toggle-sun" aria-hidden="true">☀</span>
+                <span class="theme-toggle-icon theme-toggle-moon" aria-hidden="true">☾</span>
+            </button>
+            <a class="btn btn-primary btn-small" href="https://apps.apple.com/us/app/spacepeek/id6777129953"
+                data-app-store-link>Get SpacePeek</a>
+        </div>
     </header>
 
-    <main id="top" class="container">
-        <section class="hero" id="about">
-            <div class="hero-layout">
-                <div class="hero-copy-wrap">
-                    <p class="eyebrow">macOS Utility</p>
-                    <h1>Preview Folder Size Instantly from Finder</h1>
-                    <p class="hero-copy">
-                        Select a folder in Finder, press the Space Bar, and instantly open SpacePeek in Quick Look.
-                        A high-performance Rust engine and polished SwiftUI interface make folder size previews feel
-                        immediate,
-                        clear, and effortless.
-                    </p>
-                    <p class="hero-meta">Built for macOS 14.0 or later. Private by default, with no uploads, analytics,
-                        or hidden cloud processing.</p>
-                    <div class="cta-row">
-                        <a class="btn btn-store" href="https://apps.apple.com/us/app/spacepeek/id6777129953"
-                            data-app-store-link><span aria-hidden="true"></span> Get SpacePeek</a>
-                        <a class="btn btn-primary" href="#support">Get Support</a>
-                        <a class="btn btn-secondary" href="privacy.html">View Privacy Policy</a>
-                    </div>
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">macOS Utility</p>
+                <h1 id="hero-title">Preview folder size instantly from Finder</h1>
+                <p class="hero-lede">
+                    Select a folder in Finder, press the Space Bar, and SpacePeek shows you which items are taking up
+                    space.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="https://apps.apple.com/us/app/spacepeek/id6777129953"
+                        data-app-store-link>Get SpacePeek</a>
+                    <a class="text-link" href="#screenshots">View Screenshots</a>
                 </div>
-                <aside class="hero-note" aria-label="Product summary">
-                    <p class="eyebrow">At a Glance</p>
-                    <h2>Finder QuickLook Extension for Folders</h2>
-                    <p>Select any folder in Finder, press the Space Bar, and SpacePeek opens instantly with a clear
-                        storage breakdown, item counts, and the folders taking the most space.</p>
-                    <div class="hero-preview-card" aria-hidden="true">
-                        <img src="screenshots/SpacePeek-01.jpg"
-                            alt="Finder-style preview showing SpacePeek visualizing folder storage distribution"
-                            loading="eager" />
-                    </div>
-                </aside>
+                <ul class="pill-list" aria-label="Highlights">
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M3 6a3 3 0 0 1 3-3h4l2 2h6a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Z" />
+                        </svg>
+                        Finder QuickLook
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M13 2 5 13h6l-1 9 9-13h-6l1-7Z" />
+                        </svg>
+                        Fast Local Scanning
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M12 2a10 10 0 1 0 10 10h-8V2h-2Zm2 0v8h8a10 10 0 0 0-8-8Z" />
+                        </svg>
+                        Storage Visibility
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M7 7h8.6l-2.3-2.3 1.4-1.4L19.4 8l-4.7 4.7-1.4-1.4L15.6 9H7a3 3 0 0 0 0 6h10v2H7A5 5 0 0 1 7 7Z" />
+                        </svg>
+                        Smooth Navigation
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M12 2a5 5 0 0 0-5 5v3H5v12h14V10h-2V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z" />
+                        </svg>
+                        Local-First Privacy
+                    </li>
+                </ul>
+            </div>
+            <div class="hero-visual" aria-label="SpacePeek poster slideshow">
+                <div class="poster-track" id="posterTrack">
+                    <figure class="poster-slide">
+                        <img src="posters/01.png" alt="SpacePeek poster showing instant folder size preview" />
+                    </figure>
+                    <figure class="poster-slide">
+                        <img src="posters/02.png" alt="SpacePeek poster showing storage distribution in a folder" />
+                    </figure>
+                    <figure class="poster-slide">
+                        <img src="posters/03.png" alt="SpacePeek poster showing Downloads cleanup analysis" />
+                    </figure>
+                    <figure class="poster-slide">
+                        <img src="posters/04.png" alt="SpacePeek poster showing large project folder analysis" />
+                    </figure>
+                </div>
+                <div class="poster-dots" id="posterDots" aria-label="Poster navigation"></div>
             </div>
         </section>
 
-        <section class="feature-grid" aria-label="Features">
-            <article>
-                <p class="feature-icon" aria-hidden="true">⚡</p>
-                <h2>Fast Local Scanning</h2>
-                <p>Press Space on a selected Finder folder to see counts and storage details without opening a heavier
-                    disk utility.</p>
-            </article>
-            <article>
-                <p class="feature-icon" aria-hidden="true">◔</p>
-                <h2>Storage Visibility</h2>
-                <p>See total size, item counts, and the folders or files using the most space so cleanup decisions are
-                    easier.</p>
-            </article>
-            <article>
-                <p class="feature-icon" aria-hidden="true">⇢</p>
-                <h2>Smooth Navigation</h2>
-                <p>Move through nested folders and inspect deeper storage distribution inside the same Quick Look
-                    preview.</p>
-            </article>
-            <article>
-                <p class="feature-icon" aria-hidden="true">🔒</p>
-                <h2>Local-First Privacy</h2>
-                <p>Folder contents and scan results stay on your Mac. SpacePeek does not upload, track, or process your
-                    files remotely.</p>
-            </article>
-        </section>
-
-        <section class="inline-cta panel" id="download">
-            <div>
-                <p class="eyebrow">Get SpacePeek</p>
-                <h2>Ready to inspect folder size with one Space Bar press?</h2>
-            </div>
-            <a class="btn btn-store" href="https://apps.apple.com/us/app/spacepeek/id6777129953"
-                data-app-store-link><span aria-hidden="true"></span> Get SpacePeek</a>
-        </section>
-
-        <section id="how-it-works" class="panel steps-panel">
+        <section class="section" id="features" aria-labelledby="features-title">
             <div class="section-heading">
+                <p class="eyebrow">Features</p>
+                <h2 id="features-title">A faster way to understand folder storage</h2>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M3 6a3 3 0 0 1 3-3h4l2 2h6a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm13 2a4 4 0 1 0 2.5 7.1l1.7 1.7 1.4-1.4-1.7-1.7A4 4 0 0 0 16 8Zm0 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z" />
+                        </svg>
+                    </span>
+                    <h3>Finder QuickLook Extension</h3>
+                    <p>Select a folder in Finder and open SpacePeek instantly for a clear storage breakdown.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M13 2 5 13h6l-1 9 9-13h-6l1-7Z" />
+                        </svg>
+                    </span>
+                    <h3>Fast Local Scanning</h3>
+                    <p>See counts and storage details without launching a heavy disk utility.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M12 2a10 10 0 1 0 10 10h-8V2h-2Zm2 0v8h8a10 10 0 0 0-8-8Z" />
+                        </svg>
+                    </span>
+                    <h3>Storage Visibility</h3>
+                    <p>Identify the folders and files using the most space for easier cleanup.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M7 7h8.6l-2.3-2.3 1.4-1.4L19.4 8l-4.7 4.7-1.4-1.4L15.6 9H7a3 3 0 0 0 0 6h10v2H7A5 5 0 0 1 7 7Z" />
+                        </svg>
+                    </span>
+                    <h3>Smooth Navigation</h3>
+                    <p>Move through nested folders and inspect deeper storage distribution inside the preview.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M12 2a5 5 0 0 0-5 5v3H5v12h14V10h-2V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Zm3 4a2 2 0 0 1 1 3.7V20h-2v-2.3A2 2 0 0 1 12 14Z" />
+                        </svg>
+                    </span>
+                    <h3>Local-First Privacy</h3>
+                    <p>SpacePeek does not upload, track or process your files remotely.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section steps-section" id="how-it-works" aria-labelledby="steps-title">
+            <div class="section-heading centered">
                 <p class="eyebrow">How It Works</p>
-                <h2>Three Steps to Instant Folder Insight</h2>
+                <h2 id="steps-title">Three steps from Finder to folder insight</h2>
             </div>
             <div class="steps-grid">
                 <article>
@@ -132,108 +187,115 @@
                 <article>
                     <span class="step-number">3</span>
                     <h3>Inspect the Breakdown</h3>
-                    <p>Review the size breakdown, item counts, and top space consumers right away.</p>
+                    <p>Review the size breakdown, item counts and top space consumers right away.</p>
                 </article>
             </div>
         </section>
 
-        <section id="screenshots" class="panel">
+        <section class="section" id="screenshots" aria-labelledby="screenshots-title">
             <div class="section-heading">
-                <p class="eyebrow">App Preview</p>
-                <h2>Screenshots</h2>
-                <p>Browse the Quick Look experience and see how SpacePeek turns folder storage into something easy to
-                    understand.</p>
+                <p class="eyebrow">Screenshots</p>
+                <h2 id="screenshots-title">Screenshots</h2>
             </div>
-            <div class="gallery-stage">
-                <div class="stack-wrap" id="stackWrap" aria-live="polite">
-                    <figure class="shot-card">
-                        <img src="screenshots/SpacePeek-01.jpg"
-                            alt="SpacePeek showing a ring chart visualizing folder distribution in Quick Look"
-                            loading="lazy" />
-                        <figcaption>See how folder size is distributed across major items with a clear ring chart.
-                        </figcaption>
-                    </figure>
-                    <figure class="shot-card">
-                        <img src="screenshots/SpacePeek-02.jpg"
-                            alt="SpacePeek displaying total size and item counts for a selected folder"
-                            loading="lazy" />
-                        <figcaption>Total size and item counts appear instantly for the selected folder.</figcaption>
-                    </figure>
-                    <figure class="shot-card">
-                        <img src="screenshots/SpacePeek-03.jpg"
-                            alt="SpacePeek highlighting the largest files and folders inside a folder preview"
-                            loading="lazy" />
-                        <figcaption>Spot the files and folders using the most space before you dig deeper.</figcaption>
-                    </figure>
-                    <figure class="shot-card">
-                        <img src="screenshots/SpacePeek-04.jpg"
-                            alt="SpacePeek navigating deeper into subfolders to inspect storage distribution"
-                            loading="lazy" />
-                        <figcaption>Move deeper into subfolders without leaving the preview.</figcaption>
-                    </figure>
-                    <figure class="shot-card">
-                        <img src="screenshots/SpacePeek-05.jpg"
-                            alt="SpacePeek showing polished macOS interface details for disk usage preview"
-                            loading="lazy" />
-                        <figcaption>The SwiftUI interface keeps dense storage information calm and readable.
-                        </figcaption>
-                    </figure>
-                    <figure class="shot-card">
-                        <img src="screenshots/SpacePeek-06.jpg"
-                            alt="SpacePeek presenting a folder summary with visual storage insight and counts"
-                            loading="lazy" />
-                        <figcaption>Quick summaries help you understand folder structure before opening it.</figcaption>
-                    </figure>
+            <div class="gallery-shell" aria-label="Screenshot carousel">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="galleryTrack">
+                        <figure class="gallery-slide">
+                            <img src="screenshots/SpacePeek-01.jpg"
+                                alt="SpacePeek showing a ring chart visualizing folder distribution" loading="lazy" />
+                            <figcaption>Ring chart visualizing folder distribution.</figcaption>
+                        </figure>
+                        <figure class="gallery-slide">
+                            <img src="screenshots/SpacePeek-02.jpg"
+                                alt="SpacePeek displaying total size and item counts for a selected folder"
+                                loading="lazy" />
+                            <figcaption>Total size and item counts at a glance.</figcaption>
+                        </figure>
+                        <figure class="gallery-slide">
+                            <img src="screenshots/SpacePeek-03.jpg"
+                                alt="SpacePeek highlighting the largest files and folders inside a folder preview"
+                                loading="lazy" />
+                            <figcaption>Top files and folders ranked by size.</figcaption>
+                        </figure>
+                        <figure class="gallery-slide">
+                            <img src="screenshots/SpacePeek-04.jpg"
+                                alt="SpacePeek navigating deeper into subfolders" loading="lazy" />
+                            <figcaption>Nested folders with deeper storage context.</figcaption>
+                        </figure>
+                        <figure class="gallery-slide">
+                            <img src="screenshots/SpacePeek-05.jpg"
+                                alt="SpacePeek showing a folder summary and storage chart" loading="lazy" />
+                            <figcaption>Folder summaries in a clean macOS preview.</figcaption>
+                        </figure>
+                        <figure class="gallery-slide">
+                            <img src="screenshots/SpacePeek-06.jpg"
+                                alt="SpacePeek presenting a Downloads folder with additional analysis" loading="lazy" />
+                            <figcaption>Downloads analysis with extra cleanup context.</figcaption>
+                        </figure>
+                    </div>
                 </div>
-                <div class="gallery-dots" id="galleryDots" aria-label="Screenshot navigation"></div>
                 <div class="gallery-controls">
-                    <button class="btn btn-secondary" id="prevShot" type="button">Previous</button>
-                    <button class="btn btn-primary" id="nextShot" type="button">Next</button>
+                    <button class="gallery-button" id="prevShot" type="button" aria-label="Previous screenshot">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="m15.5 5-7 7 7 7 1.5-1.5-5.5-5.5L17 6.5 15.5 5Z" />
+                        </svg>
+                    </button>
+                    <div class="gallery-dots" id="galleryDots" aria-label="Screenshot navigation"></div>
+                    <button class="gallery-button" id="nextShot" type="button" aria-label="Next screenshot">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="m8.5 19 7-7-7-7L7 6.5l5.5 5.5L7 17.5 8.5 19Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section id="support" class="panel support-panel">
-            <div class="section-heading">
-                <p class="eyebrow">Support URL</p>
-                <h2>Need Help?</h2>
+        <section class="section pro-section" id="pro" aria-labelledby="pro-title">
+            <div class="pro-icon" aria-hidden="true">∞</div>
+            <div>
+                <p class="eyebrow">SpacePeek Pro</p>
+                <h2 id="pro-title">Unlimited sub-folder drill-in for $3.99</h2>
+                <p>The free version lets you explore up to two levels deep; upgrade once to unlock unlimited drill-in.</p>
             </div>
-            <div class="support-grid">
-                <article class="support-card">
-                    <h3><span aria-hidden="true">✉</span> Email Support</h3>
-                    <p>Contact the developer directly for bug reports, troubleshooting help, or general support.</p>
-                    <a class="btn btn-primary" href="mailto:wangfu91+spacepeek@hotmail.com">Send Email</a>
-                </article>
-                <article class="support-card">
-                    <h3><span aria-hidden="true">⌘</span> GitHub Issues</h3>
-                    <p>Open a public issue for reproducible bugs, edge cases, or feature requests.</p>
-                    <a class="btn btn-secondary" href="https://github.com/wangfu91/spacepeek/issues">Open a GitHub
-                        Issue</a>
-                </article>
-                <article class="support-card">
-                    <h3><span aria-hidden="true">✓</span> Requirements & Privacy</h3>
-                    <p>Requires macOS 14.0 or later. All processing happens locally on your Mac, with no uploaded folder
-                        contents or scan results.</p>
-                    <a class="btn btn-secondary" href="privacy.html">Read Privacy Policy</a>
-                </article>
-                <article class="support-card faq-card">
-                    <h3><span aria-hidden="true">?</span> Quick FAQ</h3>
-                    <p><strong>How do I launch it?</strong> Select a folder in Finder, then press Space.</p>
-                    <p><strong>Does it upload data?</strong> No. SpacePeek scans and previews locally only.</p>
-                    <p><strong>Where can I report issues?</strong> Use email support or GitHub Issues.</p>
-                </article>
-            </div>
+            <a class="btn btn-primary" href="https://apps.apple.com/us/app/spacepeek/id6777129953"
+                data-app-store-link>Upgrade for $3.99</a>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>© 2026 SpacePeek. Built for macOS.</p>
-        <div class="footer-links">
-            <a href="https://github.com/wangfu91/SpacePeek">GitHub</a>
-            <a href="https://github.com/wangfu91/spacepeek/issues">Support</a>
-            <a href="privacy.html">Privacy Policy</a>
+    <footer class="site-footer" id="support">
+        <div class="footer-grid">
+            <section>
+                <h2>Support</h2>
+                <p>
+                    <a href="mailto:wangfu91+spacepeek@hotmail.com">Email support</a> or
+                    <a href="https://github.com/wangfu91/spacepeek/issues">GitHub issues</a>.
+                </p>
+            </section>
+            <section>
+                <h2>Requirements</h2>
+                <p>Requires macOS 14.0 or later. All processing happens locally on your Mac.</p>
+            </section>
+            <section>
+                <h2>FAQ</h2>
+                <dl class="faq-list">
+                    <dt>How do I launch it?</dt>
+                    <dd>Select a folder in Finder, then press Space.</dd>
+                    <dt>Does it upload data?</dt>
+                    <dd>No. Folder scanning and previews stay on your Mac.</dd>
+                    <dt>Where can I report issues?</dt>
+                    <dd>Use email support or GitHub Issues.</dd>
+                </dl>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 SpacePeek.</p>
+            <nav aria-label="Footer navigation">
+                <a href="https://github.com/wangfu91/SpacePeek">GitHub</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </nav>
         </div>
     </footer>
+
     <script src="assets/site.js"></script>
     <script src="assets/theme.js"></script>
     <script src="assets/gallery.js"></script>
