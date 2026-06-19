@@ -6,65 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SpacePeek Privacy Policy</title>
     <meta name="description" content="Privacy Policy for SpacePeek macOS app." />
+    <meta name="theme-color" content="#f7f8fb" />
+    <link rel="canonical" href="https://spacepeek.space/privacy.html" />
+    <link rel="icon" href="favicon.ico?v=8" sizes="any" />
+    <link rel="apple-touch-icon" href="assets/SpacePeek.png" />
     <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
-<body>
-    <header class="site-header">
-        <a class="brand" href="index.html">SpacePeek</a>
-        <nav>
+<body class="privacy-page">
+    <header class="site-header" id="siteHeader">
+        <a class="brand" href="index.html">
+            <img src="assets/SpacePeek.png" alt="" />
+            <span>SpacePeek</span>
+        </a>
+        <nav aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a href="index.html#support">Support</a>
         </nav>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle theme">
+                <span class="theme-toggle-icon theme-toggle-sun" aria-hidden="true">☀</span>
+                <span class="theme-toggle-icon theme-toggle-moon" aria-hidden="true">☾</span>
+            </button>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="panel">
-            <p class="eyebrow">Official Statement</p>
+    <main class="policy-main">
+        <article class="policy-card">
+            <p class="eyebrow">Privacy</p>
             <h1>SpacePeek Privacy Policy</h1>
-            <p>Effective date: 2026-06-09</p>
+            <p class="policy-date">Effective date: June 9, 2026</p>
 
-            <h2>Data Collection and Processing</h2>
-            <ul>
-                <li>SpacePeek does not collect, transmit, or store any personal data from users.</li>
-                <li>
-                    All folder scanning and preview operations are performed locally on the user’s Mac
-                    inside a sandboxed process.
-                </li>
-                <li>
-                    The app does not make network connections, does not include analytics or advertising,
-                    and does not integrate third-party tracking SDKs.
-                </li>
-            </ul>
+            <nav class="policy-toc" aria-label="Privacy policy contents">
+                <a href="#data">Data Collection</a>
+                <a href="#diagnostics">Diagnostics</a>
+                <a href="#contact">Support</a>
+                <a href="#changes">Changes</a>
+            </nav>
 
-            <h2>Crash Reports and Diagnostics</h2>
-            <ul>
-                <li>
-                    SpacePeek does not include third-party crash-reporting or analytics services. If users
-                    opt in to send diagnostics through Apple system services, those reports are handled by
-                    Apple under Apple’s policies and user settings.
-                </li>
-            </ul>
+            <section id="data">
+                <h2>Data Collection and Processing</h2>
+                <p>SpacePeek scans folders locally and collects no personal data.</p>
+                <ul>
+                    <li>SpacePeek does not collect, transmit or store personal data from users.</li>
+                    <li>Folder scanning and preview operations are performed locally on your Mac.</li>
+                    <li>The app does not include analytics, advertising or third-party tracking SDKs.</li>
+                    <li>Folder contents and scan results are not uploaded to remote servers.</li>
+                </ul>
+            </section>
 
-            <h2>Support and Contact</h2>
-            <p>For support or privacy questions, contact: wangfu91+spacepeek@hotmail.com</p>
-            <p>
-                You can also open an issue at:
-                <a href="https://github.com/wangfu91/spacepeek/issues">https://github.com/wangfu91/spacepeek/issues</a>
-            </p>
+            <section id="diagnostics">
+                <h2>Crash Reports and Diagnostics</h2>
+                <p>
+                    SpacePeek does not include third-party crash-reporting services. If users opt in to send diagnostics
+                    through Apple system services, those reports are handled by Apple under Apple policies and user
+                    settings.
+                </p>
+            </section>
 
-            <h2>Changes to This Policy</h2>
-            <p>
-                We may update this Privacy Policy if the app’s behavior changes. We will update the
-                Effective date when material changes occur.
-            </p>
-        </section>
+            <section id="contact">
+                <h2>Support and Contact</h2>
+                <p>
+                    For support or privacy questions, contact
+                    <a href="mailto:wangfu91+spacepeek@hotmail.com">wangfu91+spacepeek@hotmail.com</a>.
+                </p>
+                <p>
+                    You can also open an issue at
+                    <a href="https://github.com/wangfu91/spacepeek/issues">GitHub Issues</a>.
+                </p>
+            </section>
+
+            <section id="changes">
+                <h2>Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy if the app behavior changes. We will update the effective date
+                    when material changes occur.
+                </p>
+            </section>
+        </article>
     </main>
 
-    <footer class="site-footer">
-        <p>© 2026 SpacePeek</p>
-        <a href="index.html">Back to Home</a>
+    <footer class="site-footer simple-footer">
+        <div class="footer-bottom">
+            <p>© 2026 SpacePeek.</p>
+            <nav aria-label="Footer navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#support">Support</a>
+            </nav>
+        </div>
     </footer>
+
+    <script src="assets/site.js"></script>
+    <script src="assets/theme.js"></script>
 </body>
 
 </html>

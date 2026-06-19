@@ -19,9 +19,8 @@ SpacePeek is a macOS Quick Look extension for folders that helps you inspect fol
 
 The GitHub Pages landing page for this project is available here:
 
-- https://wangfu91.github.io/SpacePeek/
+- https://spacepeek.space/
 
 The privacy policy page is here:
 
-- https://wangfu91.github.io/SpacePeek/privacy.html
-
+- https://spacepeek.space/privacy.html

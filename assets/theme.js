@@ -15,6 +15,7 @@
         const nextTheme = themeChoice === "dark" ? "light" : "dark";
         toggle.setAttribute("aria-label", "Switch to " + nextTheme + " theme");
         toggle.setAttribute("title", "Switch to " + nextTheme + " theme");
+        toggle.setAttribute("aria-pressed", themeChoice === "dark" ? "true" : "false");
     }
 
     function applyTheme(themeChoice) {
